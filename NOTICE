@@ -1,0 +1,20 @@
+This Go library is a port of chaptr 1.5.0 by johnthreekay:
+https://github.com/johnthreekay/chaptr
+The Rust source and this Go port are licensed GPL-3.0-or-later.
+
+2026-10-27: emirrcaglar adapted the Rust implementation to Go, added a
+filename CLI, Go tests and benchmarks, and a Rust parity fixture generator.
+Upstream Rust source accompanies this workspace in rust/; a Go-only
+distribution can identify its origin through the upstream URL above.
+
+Rust parity fixtures derive in part from the supplied corpora:
+- Kavita manga and book parser tests (GPL-3.0):
+  https://github.com/Kareadita/Kavita
+- Mihon ChapterRecognitionTest (Apache-2.0):
+  https://github.com/mihonapp/mihon
+- Hand-picked and smoke light novel filenames from Nyaa, as supplied with chaptr.
+
+See chaptr/testdata/NOTICE for corpus provenance. The original corpus files in the
+upstream chaptr distribution retain per-entry attribution under corpus/.
+Fixtures record observed chaptr outputs rather than overriding behavior with
+upstream corpus expectations.

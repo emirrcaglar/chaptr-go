@@ -1,0 +1,27 @@
+Rust parity fixtures: provenance and modification notice
+
+2026-10-27: emirrcaglar generated rust_parity.json by running chaptr 1.5.0
+against the inputs below, recording both manga and novel parser results and
+lexer token spans. These are observed chaptr outputs, not the original
+corpora's expected results. The generated fixture collection is distributed
+as part of this GPL-3.0-or-later port; applicable upstream notices remain.
+
+chaptr 1.5.0 by johnthreekay (GPL-3.0-or-later):
+https://github.com/johnthreekay/chaptr
+- src/ unit-test string literals
+- corpus/novel_nyaa.json and corpus/smoke_novel.txt (Nyaa filename metadata)
+
+Kavita contributors (GPL-3.0):
+https://github.com/Kareadita/Kavita
+- MangaParsingTests.cs, via chaptr corpus/manga_kavita.json
+- BookParsingTests.cs, via chaptr corpus/novel_kavita.json
+
+Mihon contributors (Apache-2.0):
+https://github.com/mihonapp/mihon
+- ChapterRecognitionTest.kt, via chaptr corpus/chapters_mihon.json
+- Apache-2.0 license text is included at ../../LICENSES/Apache-2.0.txt.
+
+Additional numeric boundary and malformed-input cases were authored for this
+Go port. The generator in ../../tools/generate_parity.py identifies each input
+collection. The sibling rust/corpus/ directory in the complete workspace
+retains the supplied corpora and their original per-entry source fields.
